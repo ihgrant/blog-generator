@@ -1,0 +1,12 @@
+{
+  "name": "blog.chenghiz.net",
+  "version": "0.0.1",
+  "description": "",
+  "main": "build/index.html",
+  "author": "ihgrant",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-static-site": "0.0.6",
+    "gulp-webserver": "^0.8.3"
+  }
+}

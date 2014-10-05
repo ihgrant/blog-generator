@@ -1,0 +1,17 @@
+doctype html
+html
+    include ./head.jade
+    body
+        div.container
+            div.row.clearfix
+                div.column.third.colors
+                    a(href='/')
+                        h1.title BLÖGGN
+            div.row.cleafix
+                div.column.third.p-0
+                    include ./nav.jade
+                div#posts.column.two-thirds
+                    each node in page.tree.nodes
+                        if node.leaf
+                            li
+                                a(href=node.leaf.href)= node.leaf.shortName
