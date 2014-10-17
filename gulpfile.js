@@ -25,15 +25,16 @@ gulp.task('js', function () {
 });
 
 gulp.task('default', ['site','css', 'js'], function () {
-    // gulp.watch(paths.sources, ['site']);
+    gulp.watch(paths.sources, ['site']);
     // gulp.watch(paths.stylesheets, ['css']);
 });
 
-gulp.task('webserver', function() {
-	gulp.src('build')
-		.pipe(webserver({
-			livereload: true,
-			directoryListing: true,
-			open: 'build/'
-		}));
-});
+// gulp.task('webserver', function() {
+// 	gulp.src('build')
+// 		.pipe(webserver({
+//             host: '0.0.0.0',
+// 			livereload: true,
+// 			directoryListing: true,
+// 			open: 'build/'
+// 		}));
+// });

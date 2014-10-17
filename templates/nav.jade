@@ -2,8 +2,10 @@ ul#nav.colors.p-0.m-0
     li
         a(href='/') blog
     li
-        a(href='') projects
-    li
         a(href='') photos
     li
         a(href='https://github.com/ihgrant') github
+each node in page.tree.nodes
+    if node.leaf
+        li
+            a(href=node.leaf.href)= node.leaf.shortName

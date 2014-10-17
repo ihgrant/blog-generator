@@ -28,6 +28,15 @@ h1, h2, h3, h4, h5, p {
 p {
     color: #333;
 }
+hr {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
 .light {
     font-weight: 300;
 }
@@ -49,6 +58,7 @@ p {
 }
 .title {
     color: #fff;
+    text-decoration: none;
 }
 #nav {
     list-style: none;
@@ -65,6 +75,9 @@ p {
 #nav li:hover {
     background-color: #fff;
 }
+#posts h1 {
+    margin-top: 0;
+}
 #posts img {
     width: 100%;
 }
@@ -72,7 +85,11 @@ p {
 body.night {
     background-color: #000;
 }
-.night h1, h2, h3, h4, h5 {
+.night h1,
+.night h2,
+.night h3,
+.night h4,
+.night h5 {
     color: #fff;
 }
 .night p {

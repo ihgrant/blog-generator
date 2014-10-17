@@ -5,10 +5,11 @@ html
         div.container
             div.row.clearfix
                 div.column.third.colors
-                    a(href='/')
-                        h1.title BLÖGGN
+                    a(href='/').title
+                        h1 BLÖGGN
             div.row.cleafix
                 div.column.third.p-0
                     include ./nav.jade
                 div#posts.column.two-thirds
+                    != page.frontMatter.date
                     != page.contents

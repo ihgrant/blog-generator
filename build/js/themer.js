@@ -1,7 +1,5 @@
 /* scripts for blog.chenghiz.net */
 
-themer.initialise();
-
 var themer = (function () {
     var nightDay = function () {
         var body = document.getElementsByTagName('body')[0];
@@ -27,21 +25,23 @@ var themer = (function () {
             window.setInterval(function () {
                 'use strict';
                 try {
-                    var c = document.getElementsByClassName('colors')[0].style.backgroundColor.toString();
+                    var y = document.getElementsByClassName('colors')[0];
+                    var c = window.getComputedStyle(y).getProperty('background-color');
                     c = c.substring(c.indexOf('(') + 1, c.indexOf(')')).split(',');
                     var r = rando(+c[0], -5, 5),
                         g = rando(+c[1], -5, 5),
                         b = rando(+c[2], -2, 2),
                         colors = document.getElementsByClassName('colors');
-                    //  document.getElementById('colors-counter').style.color = 'rgb(' + r + ',' + g + ',' + b + ')';
-                    for (var x=0; x<colors.length; x++) {
+
+                    for (var x=0, l=colors.length; x<l; x++) {
                         colors[x].style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-                    };
+                    }
                 } catch (e) {
                     console.log(e.message);
                 }
             }, 800);
         }
-    }
-  };
+    };
 })();
+
+document.addEventListener('DOMCOntentLoaded', themer.initialise);

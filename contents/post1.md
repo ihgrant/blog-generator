@@ -1,5 +1,6 @@
 ---
 layout: post
+date: 2014 Oct 10
 ---
 # title 1
 
